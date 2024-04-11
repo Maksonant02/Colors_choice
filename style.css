@@ -7,6 +7,10 @@
 body {
     height: 100vh;
     display: flex;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .col {
@@ -16,5 +20,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: 2px solid #000000;
 }
+
 
