@@ -11,7 +11,10 @@ function generRandColor() {
 
 function setRandColors() {
     cols.forEach(col => {
-        col.style.background = generRandColor();
+        const text = col.querySelector('h2');
+        const color = generRandColor();
+        text.textContent = color;
+        col.style.background = color;
     })
 }
 
