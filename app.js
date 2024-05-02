@@ -12,10 +12,12 @@ function generRandColor() {
 function setRandColors() {
     cols.forEach(col => {
         const text = col.querySelector('h2');
+        const btn = col.querySelector('button')
         const color = generRandColor();
         text.textContent = color;
         col.style.background = color;
         setColorText(text, color);
+        setColorText(btn, color);
     })
 }
 
