@@ -9,6 +9,25 @@ function generRandColor() {
     return '#' + randColor;
 }
 
+document.addEventListener('keydown', event => {
+    if (event.code === 'Space') {
+        setRandColors();
+    }
+})
+
+document.addEventListener('click', event =>{
+    const type = event.target.dataset.type;
+    if (type === 'lock') {
+      const node =
+        event.target.tagName.toLowerCase() === 'i'
+          ? event.target
+          : event.target.children[0]
+
+      node.classList.toggle('fa-unlock-keyhole');
+      node.classList.toggle('fa-lock');
+    }
+})
+
 function setRandColors() {
     cols.forEach(col => {
         const text = col.querySelector('h2');
@@ -27,4 +46,3 @@ function setColorText(text, color) {
 }
 
 setRandColors();
-
